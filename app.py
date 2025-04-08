@@ -9,9 +9,9 @@ logging.basicConfig(level=logging.INFO)
 
 import dash
 import dash_bootstrap_components as dbc
-from dash import dcc, html
 import numpy as np
 import pandas as pd
+from dash import dcc, html
 from plotly.graph_objects import Figure
 
 # Monkey patch / patch not required imports (from SelectZyme) as workaround to avoid module not found errors
@@ -59,7 +59,9 @@ def main(app, input_dir) -> None:
     fig_mst = Figure(fig)  # copy required else fig will be modified by mst creation
 
     # Create page layouts
-    dash.register_page("eda", name="Explanatory Data Analysis", layout=eda.layout(df, out_file=export_path + "_eda.html"))
+    dash.register_page("eda", 
+                       name="Explanatory Data Analysis", 
+                       layout=eda.layout(df, out_file=export_path + "_eda.html"))
     dash.register_page(
         "dim",
         name="Protein Landscape",
@@ -68,7 +70,10 @@ def main(app, input_dir) -> None:
     dash.register_page(
         "mst", name="Connectivity", layout=mst.layout(mst_tree, df, X_red, fig_mst)
     )
-    dash.register_page("slc", name="Phylogeny", layout=sl.layout(_linkage=linkage, df=df, legend_attribute=legend_attribute, out_file=export_path + "_slc.html"))
+    dash.register_page("slc", name="Phylogeny", layout=sl.layout(_linkage=linkage, 
+                                                                 df=df, 
+                                                                 legend_attribute=legend_attribute, 
+                                                                 out_file=export_path + "_slc.html"))
 
     # Register callbacks
     register_callbacks(app, df, X_red)
