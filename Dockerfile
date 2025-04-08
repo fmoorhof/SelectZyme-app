@@ -8,6 +8,7 @@ COPY . /app
 RUN pip install .
 
 # do not install dependencies from SelectZyme but only import code
+RUN apt-get update && apt-get install -y git
 RUN git submodule add https://github.com/ipb-halle/SelectZyme.git external/selectzyme
 
 # Expose the port Dash will run on
