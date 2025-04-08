@@ -68,7 +68,7 @@ def main(app, input_dir) -> None:
     dash.register_page(
         "mst", name="Connectivity", layout=mst.layout(mst_tree, df, X_red, fig_mst)
     )
-    dash.register_page("slc", name="Phylogeny", layout=sl.layout(G=linkage, df=df, legend_attribute=legend_attribute, out_file=export_path + "_slc.html"))
+    dash.register_page("slc", name="Phylogeny", layout=sl.layout(_linkage=linkage, df=df, legend_attribute=legend_attribute, out_file=export_path + "_slc.html"))
 
     # Register callbacks
     register_callbacks(app, df, X_red)
@@ -111,9 +111,9 @@ if __name__ == "__main__":
         suppress_callback_exceptions=True,
         external_stylesheets=[dbc.themes.BOOTSTRAP],  # Optional for styling
     )
-    server = app.server  # this line is only needed when deployed on a public server
+    # server = app.server  # this line is only needed when deployed on a public server
     
     input_dir = "data/minimal_example/"
 
     main(app, input_dir)
-    app.run_server(host="127.0.0.1", port=8051, debug=False)
+    app.run(host="127.0.0.1", port=8051, debug=False)  # run_server for backwards compatibility (older dash versions)
