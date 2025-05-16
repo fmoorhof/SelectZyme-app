@@ -1,7 +1,7 @@
 services:
   selectzyme-proxy:
     image: nginx:alpine
-    # Port forwarding disabled for production runs
+    # Port forwarding disabled for production runs (profiles or docker-compose.override.yml can be used alternatively)
     #ports:
     #  - "80:80"
     volumes:
@@ -18,7 +18,7 @@ services:
     image: ipb-halle/selectzyme-demo-app:development
     command: --input_dir=/app/data_container/
     environment:
-      - DASH_URL_BASE_PATHNAME=/selectzyme-demo/blast-psi/  # 127.0.0.1:PORT/DASH_URL_BASE_PATHNAME
+      - DASH_URL_BASE_PATHNAME=/selectzyme-demo/blast-psi/
     volumes:
       - ./data/blast_psi/:/app/data_container/
     networks:

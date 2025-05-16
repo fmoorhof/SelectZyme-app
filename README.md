@@ -59,5 +59,25 @@ Access the server for your analysis from your browser at: `localhost:8050`
 This project uses the following tools to improve code quality:
 - [ruff](https://docs.astral.sh/ruff/tutorial/)
 
+## Server deployment
+Target server: [biocloud](https://biocloud.ipb-halle.de/)
+Service: [SelectZyme-demo](https://biocloud.ipb-halle.de/selectzyme-demo/)
+
+Changes: Biocloud proxy sits on top of SelectZyme-demo proxy
+```mermaid
+sequenceDiagram
+    actor User
+    participant BP as Biocloud Proxy
+    participant SDP as Selectzyme Demo Proxy (nginx)
+    participant SDA as Selectzyme Demo App
+
+    User->>+BP: Request resource
+    BP->>+SDP: Forward request (e.g., to selectzyme-proxy.selectzyme-network)
+    SDP->>+SDA: Proxy request to Selectzyme Demo App
+    SDA-->>-SDP: App response
+    SDP-->>-BP: Forward response
+    BP-->>-User: Response
+```
+
 # License
 MIT License
