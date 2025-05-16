@@ -63,7 +63,14 @@ This project uses the following tools to improve code quality:
 Target server: [biocloud](https://biocloud.ipb-halle.de/)
 Service: [SelectZyme-demo](https://biocloud.ipb-halle.de/selectzyme-demo/)
 
-Changes: Biocloud proxy sits on top of SelectZyme-demo proxy
+In order to automatically (re-)start the service (e.g. with a cronjob) please perform these steps:
+```
+./sz-demo.sh install  # register service 1st time
+./sz-demo.sh start
+systemctl status sz-demo.service  # test status
+./sz-demo.sh stop  # stop service
+```
+
 ```mermaid
 sequenceDiagram
     actor User
@@ -78,6 +85,7 @@ sequenceDiagram
     SDP-->>-BP: Forward response
     BP-->>-User: Response
 ```
+* Changes: Biocloud proxy sits on top of SelectZyme-demo proxy
 
 # License
 MIT License
