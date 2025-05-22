@@ -1,4 +1,4 @@
-# SelectZyme-demo-app
+# SelectZyme-app
 Minimal demonstration of pre-calculated analyses to show usage and utility of SelectZyme.
 
 ```mermaid
@@ -6,8 +6,8 @@ graph TD;
     B[BLAST-PSI analysis] --> D[data/blast_psi/:/app/data_container/];
     C[Petase analysis] --> E[data/petase/:/app/data_container/];
     
-    A[Proxy - Nginx] -->|/selectzyme-demo/blast-psi/| B[BLAST-PSI analysis];
-    A[Proxy - Nginx] -->|/selectzyme-demo/petase/| C[Petase analysis];
+    A[Proxy - Nginx] -->|/selectzyme/blast-psi/| B[BLAST-PSI analysis];
+    A[Proxy - Nginx] -->|/selectzyme/petase/| C[Petase analysis];
     
     subgraph Docker Network;
         A[Proxy - Nginx];
@@ -19,8 +19,8 @@ graph TD;
 ## Install
 Prerequisite for all installs is to clone the repository with the corresponding submodule SelectZyme.
 ```
-git clone --recurse-submodules https://github.com/ipb-halle/SelectZyme-demo-app.git
-cd SelectZyme-demo-app
+git clone --recurse-submodules https://github.com/ipb-halle/SelectZyme-app.git
+cd SelectZyme-app
 ```
 *Troubleshooting:
 if you forgot to clone with `--recurse-submodules` you can do it later via: `git submodule update --init`
@@ -30,19 +30,19 @@ if you want to leave the latest stable commit hash and use a newer version of Se
 ### Docker
 Requires cloning the repository (see above).
 ```
-docker build -t ipb-halle/selectzyme-demo-app:development .
+docker build -t ipb-halle/selectzyme-app:development .
 ```
 #### Run all case studies (reproduces SelectZyme server)
 ```
 docker-compose up
 docker-compose down  # shut down services
 ```
-Access the server from your browser at: `localhost/selectzyme-demo/`
+Access the server from your browser at: `localhost/selectzyme/`
 
 
 #### Run only individual Container
 ```
-docker run -it --rm -p 8050:8050 ipb-halle/selectzyme-demo-app:development --input_dir=/app/data/blast_psi
+docker run -it --rm -p 8050:8050 ipb-halle/selectzyme-app:development --input_dir=/app/data/blast_psi
 ```
 Access the server for your analysis from your browser at: `localhost:8050`
 
@@ -65,14 +65,14 @@ This project uses the following tools to improve code quality:
 
 ## Server deployment
 Target server: [biocloud](https://biocloud.ipb-halle.de/)
-Service: [SelectZyme-demo](https://biocloud.ipb-halle.de/selectzyme-demo/)
+Service: [SelectZyme](https://biocloud.ipb-halle.de/selectzyme/)
 
 In order to automatically (re-)start the service (e.g. with a cronjob) please perform these steps:
 ```
-./sz-demo.sh install  # register service 1st time
-./sz-demo.sh start
-systemctl status sz-demo.service  # test status
-./sz-demo.sh stop  # stop service
+./sz.sh install  # register service 1st time
+./sz.sh start
+systemctl status sz.service  # test status
+./sz.sh stop  # stop service
 ```
 
 ```mermaid
@@ -89,7 +89,7 @@ sequenceDiagram
     SDP-->>-BP: Forward response
     BP-->>-User: Response
 ```
-* Changes: Biocloud proxy sits on top of SelectZyme-demo proxy
+* Changes: Biocloud proxy sits on top of SelectZyme proxy
 
 # License
 MIT License

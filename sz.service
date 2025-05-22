@@ -1,5 +1,5 @@
 [Unit]
-Description=SelectZyme demo app
+Description=SelectZyme app
 After=docker.service
 Before=
 
@@ -9,8 +9,8 @@ Group=root
 Type=oneshot
 RemainAfterExit=yes
 TimeoutStartSec=600s
-ExecStart=LOCAL_SZ_INSTALLATION_SOURCE/sz-demo.sh start
-ExecStop=LOCAL_SZ_INSTALLATION_SOURCE/sz-demo.sh stop
+ExecStart=LOCAL_SZ_INSTALLATION_SOURCE/sz.sh start
+ExecStop=LOCAL_SZ_INSTALLATION_SOURCE/sz.sh stop
 
 [Install]
 WantedBy=multi-user.target

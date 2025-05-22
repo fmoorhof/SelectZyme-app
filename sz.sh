@@ -1,18 +1,18 @@
 #!/usr/bin/bash
 #
-# sz-demo helper script to start/stop the sz-demo
+# sz helper script to start/stop the sz
 #
 p=`dirname $0`
 DIR=`realpath $p`
 cd $DIR
 
 function installFunc {
-    cat sz-demo.service | \
+    cat sz.service | \
     sed s:LOCAL_SZ_INSTALLATION_SOURCE:$DIR: \
-    > /etc/systemd/system/sz-demo.service
+    > /etc/systemd/system/sz.service
     systemctl daemon-reload
-    systemctl enable sz-demo.service
-    systemctl start sz-demo.service
+    systemctl enable sz.service
+    systemctl start sz.service
 }
 
 case $1 in
@@ -29,6 +29,7 @@ case $1 in
         echo "Update is currently not supported"
         ;;
     *)
-        echo "Usage: sz-demo.sh [start|stop|install|update]"
+        echo "Usage: sz.sh [start|stop|install|update]"
+        exit 1
         ;;
 esac
