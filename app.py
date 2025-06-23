@@ -121,7 +121,8 @@ def main(app, input_dir) -> None:
                     style={
                         "height": "40px",
                         "marginRight": "15px"
-                    }
+                    },
+                    alt="IPB Logo"
                 )
             ],
             style={
