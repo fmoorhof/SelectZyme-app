@@ -160,6 +160,9 @@ def main(app, input_dir) -> None:
                             html.A("Datenschutz (DSGVO)", 
                                    href="https://www.ipb-halle.de/kontakt/datenschutz", 
                                    target="_blank"),
+                            html.A("Barrierefreiheit", 
+                                   href="https://www.ipb-halle.de/kontakt/barrierefreiheit", 
+                                   target="_blank"),                                   
                         ],
                         style={
                             "textAlign": "center",
