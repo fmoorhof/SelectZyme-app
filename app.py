@@ -175,6 +175,28 @@ def main(app, input_dir) -> None:
         fluid=True,
     )
 
+    # Set language attribute for accessibility (screen readers)
+    app.index_string = """
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            {%metas%}
+            <title>{%title%}</title>
+            {%favicon%}
+            {%css%}
+        </head>
+        <body>
+            {%app_entry%}
+            <footer>
+                {%config%}
+                {%scripts%}
+                {%renderer%}
+            </footer>
+        </body>
+    </html>
+    """
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run Selectzyme Dash app")
     parser.add_argument("-i", 
