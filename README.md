@@ -2,7 +2,7 @@
 Web application to host the pre calculated analyses by SelectZyme.
 
 ## Install
-Prerequisite for all installs is to clone the code and data repository.
+Prerequisite for all installs is to clone the code and data repositories.
 ```
 git clone https://github.com/ipb-halle/SelectZyme-app.git
 cd SelectZyme-app
