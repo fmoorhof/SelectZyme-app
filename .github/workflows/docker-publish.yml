@@ -1,14 +1,12 @@
 name: Build and publish Docker image
 
 on:
-  # workflow_dispatch
-    push:
-        branches: [ "ghcr-container-registry" ]
+  workflow_dispatch
 
 env:
   REGISTRY: ghcr.io
-  SELECTZYME_VERSION: 0.4.0
-  IMAGE_NAME: ${{ github.repository }}/selectzyme-app
+  SELECTZYME_VERSION: 0.0.4
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
@@ -58,3 +56,4 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        
