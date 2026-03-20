@@ -27,7 +27,7 @@ Usage:
 python app.py  # runs example analysis 'demo' by default
 python app.py -i=petase
 ```
-`-i=` specify the case study to load. Available case studies are listed [here](https://huggingface.co/datasets/fmoorhof/selectzyme-app-data/tree/main) with their names (here as an example petase).
+`-i=` specify the case study to load. Available case studies are listed [here](https://huggingface.co/datasets/davari-group/selectzyme-app-data/tree/main) with their names (here as an example petase).
 Access the server for your analysis from your browser at: `localhost:8050`
 
 ## Architecture
