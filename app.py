@@ -55,10 +55,10 @@ def import_results(dataset_name: str) -> tuple[pd.DataFrame, np.ndarray, np.ndar
             - np.ndarray: Linkage matrix loaded from "x_red_mst_slc.npz".
     """
     # Download files from Hugging Face Hub
-    df_path = hf_hub_download(repo_id="fmoorhof/selectzyme-app-data", 
+    df_path = hf_hub_download(repo_id="davari-group/selectzyme-app-data", 
                               filename=f"{dataset_name}/df.parquet", 
                               repo_type="dataset")
-    npz_path = hf_hub_download(repo_id="fmoorhof/selectzyme-app-data", 
+    npz_path = hf_hub_download(repo_id="davari-group/selectzyme-app-data", 
                                filename=f"{dataset_name}/x_red_mst_slc.npz", 
                                repo_type="dataset")
 
