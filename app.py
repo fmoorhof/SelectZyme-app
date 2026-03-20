@@ -111,7 +111,7 @@ def main(app, dataset_name) -> None:
         html.Div(
             [
                 html.A("← Back to Home", 
-                    href="/selectzyme/", 
+                    href="/", 
                     style={
                         "fontSize": "16px",
                         "textDecoration": "none",

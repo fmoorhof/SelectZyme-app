@@ -14,7 +14,7 @@ cd SelectZyme-app
 docker-compose up
 docker-compose down  # shut down services
 ```
-Access the server from your browser at: `localhost/selectzyme/`
+Access the server from your browser at: `localhost/`
 
 ### Local install to run a single case study
 Install dependencies defined in the `pyproject.toml` and SelectZyme without dependencies.
@@ -36,8 +36,8 @@ graph TD;
     B[Demo analysis] --> D[data/demo/:/app/data_container/];
     C[Petase analysis] --> E[data/petase/:/app/data_container/];
     
-    A[Proxy - Nginx] -->|/selectzyme/demo/| B[Demo analysis];
-    A[Proxy - Nginx] -->|/selectzyme/petase/| C[Petase analysis];
+    A[Proxy - Nginx] -->|/demo/| B[Demo analysis];
+    A[Proxy - Nginx] -->|/petase/| C[Petase analysis];
     
     subgraph Docker Network;
         A[Proxy - Nginx];
