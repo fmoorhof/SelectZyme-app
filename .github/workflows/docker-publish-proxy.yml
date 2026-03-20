@@ -1,11 +1,11 @@
-name: Build and publish Docker image
+name: Build and publish Docker proxy image
 
 on:
   workflow_dispatch
 
 env:
   REGISTRY: ghcr.io
-  SELECTZYME_VERSION: 0.0.4
+  SELECTZYME_VERSION: 0.0.5
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
@@ -41,15 +41,15 @@ jobs:
           type=raw,value=${{ env.SELECTZYME_VERSION }}
         labels: |
           org.opencontainers.image.url=${{ github.server_url }}/${{ github.repository }}
-          org.opencontainers.image.title=selectzyme-app
-          org.opencontainers.image.description=SelectZyme Web Application
+          org.opencontainers.image.title=selectzyme-proxy
+          org.opencontainers.image.description=SelectZyme Web Application proxy
           org.opencontainers.image.licenses=MIT
           org.opencontainers.image.version=${{ env.SELECTZYME_VERSION }}
 
-    - name: Build and push Docker image
+    - name: Build and push Docker proxy image
       uses: docker/build-push-action@v6
       with:
-        context: .
+        context: ./nginx
         # target: final  # if there is a staged building process
         push: true
         tags: ${{ steps.meta.outputs.tags }}
