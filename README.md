@@ -65,13 +65,13 @@ Because of a restricted company network, images (github: packages) are build usi
 ```mermaid
 sequenceDiagram
     actor User
-    participant BP as Biocloud Proxy
-    participant SDP as Selectzyme Demo Proxy (nginx)
-    participant SDA as Selectzyme Demo App
+    participant BP as Infrastructure Proxy
+    participant SDP as Proxy (nginx)
+    participant SDA as Selectzyme App
 
     User->>+BP: Request resource
     BP->>+SDP: Forward request (e.g., to selectzyme-proxy.selectzyme-network)
-    SDP->>+SDA: Proxy request to Selectzyme Demo App
+    SDP->>+SDA: Proxy request to Selectzyme App
     SDA-->>-SDP: App response
     SDP-->>-BP: Forward response
     BP-->>-User: Response
