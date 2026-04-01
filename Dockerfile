@@ -14,8 +14,8 @@ RUN \
     pip install --upgrade pip && \
     pip install uv && \
     uv sync && \
-    uv pip install --no-cache-dir --no-deps git+https://github.com/ipb-halle/SelectZyme.git@1069532 && \
-    uv run python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='fmoorhof/selectzyme-app-data', repo_type='dataset')"
+    uv pip install --no-cache-dir --no-deps git+https://github.com/ipb-halle/SelectZyme.git@f16adbc && \
+    uv run python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='davari-group/selectzyme-app-data', repo_type='dataset')"
 
 COPY . /app
 RUN uv pip install .
