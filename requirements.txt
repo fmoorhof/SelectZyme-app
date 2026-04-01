@@ -221,7 +221,7 @@ urllib3==2.6.3
     # via requests
 visions==0.8.1
     # via ydata-profiling
-werkzeug==3.1.5
+werkzeug==3.1.6
     # via
     #   dash
     #   flask
