@@ -21,9 +21,14 @@ Access the server from your browser at: `localhost/`
 ### Local install to run a single case study
 Install dependencies defined in the `pyproject.toml` and SelectZyme without dependencies.
 ```
-uv pip install .
+uv sync
 uv pip install --no-deps git+https://github.com/ipb-halle/SelectZyme.git
 ```
+Troubleshooting install:
+```
+uv pip install .
+```
+
 Usage: 
 ```
 python app.py  # runs example analysis 'demo' by default
