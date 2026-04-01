@@ -1,7 +1,7 @@
 # SelectZyme-app
 Web application to host the pre calculated analyses by SelectZyme.
 
-![SelectZyme](assets/selectzyme_logo.svg)
+![SelectZyme](assets/selectzyme_logo.png)
 
 ## Install
 Prerequisite for all installs is to clone the repository.
@@ -21,8 +21,8 @@ Access the server from your browser at: `localhost/`
 ### Local install to run a single case study
 Install dependencies defined in the `pyproject.toml` and SelectZyme without dependencies.
 ```
-pip install .
-pip install --no-dependencies git+https://github.com/ipb-halle/SelectZyme.git
+uv pip install .
+uv pip install --no-deps git+https://github.com/ipb-halle/SelectZyme.git
 ```
 Usage: 
 ```
