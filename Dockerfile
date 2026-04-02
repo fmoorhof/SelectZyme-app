@@ -8,12 +8,11 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends git \
     && rm -rf /var/lib/apt/lists/*
 
-COPY uv.lock /app/
+COPY pyproject.toml requirements.txt uv.lock /app/
 
 RUN \
-    pip install --upgrade pip && \
     pip install uv && \
-    uv sync && \
+    uv sync --frozen && \
     uv pip install --no-cache-dir --no-deps git+https://github.com/ipb-halle/SelectZyme.git@f16adbc && \
     uv run python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='davari-group/selectzyme-app-data', repo_type='dataset')"
 
