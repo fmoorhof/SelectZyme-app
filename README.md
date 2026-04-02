@@ -1,6 +1,8 @@
 # SelectZyme-app
 Web application to host the pre calculated analyses by SelectZyme.
 
+![SelectZyme](assets/selectzyme_logo.png)
+
 ## Install
 Prerequisite for all installs is to clone the repository.
 ```
@@ -19,9 +21,14 @@ Access the server from your browser at: `localhost/`
 ### Local install to run a single case study
 Install dependencies defined in the `pyproject.toml` and SelectZyme without dependencies.
 ```
-pip install .
-pip install --no-dependencies git+https://github.com/ipb-halle/SelectZyme.git
+uv sync
+uv pip install --no-deps git+https://github.com/ipb-halle/SelectZyme.git
 ```
+Troubleshooting install:
+```
+uv pip install .
+```
+
 Usage: 
 ```
 python app.py  # runs example analysis 'demo' by default
@@ -89,3 +96,15 @@ http://ocean_ip/selectzyme/demo/
 
 # License
 MIT License
+
+## Citation
+
+This repository contains the source code for the application hosted at [https://selectzyme.app.ipb-halle.de/](https://selectzyme.app.ipb-halle.de/), showing selected pre-calculated case studies for the manuscript:<br>
+
+Felix Moorhoff<sup>*1*</sup>, David Medina-Ortiz<sup>*1*</sup>, Alicja Kotnis<sup>*1*</sup>, Ahmed Hassanin<sup>*1,2*</sup>, Mehdi D. Davari<sup>*1,\**</sup>, <br>“Visualize, Explore, and Select”: A protein Language Model-Based Approach Enabling Navigation of Protein Sequence Space for Enzyme Discovery and Mining<br>
+*Journal* 2026, 61, 3463-3476 <br>
+https://doi.org/10.64898/2026.03.23.712833 <br>
+
+<sup>*1*</sup><sub>Department of Bioorganic Chemistry, Leibniz Institute of Plant Biochemistry, Weinberg 3, 06120 Halle, Germany</sub> <br>
+<sup>*2*</sup><sub>Department of Pharmacognosy, Faculty of Pharmacy, Assiut University, 71526 Assiut, Egypt</sub> <br>
+<sup>*\**</sup><sub>Corresponding author</sub> <br>
