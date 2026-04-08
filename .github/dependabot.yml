@@ -1,0 +1,8 @@
+version: 2
+updates:
+  - package-ecosystem: "uv"
+    directories:
+      - "/"
+      - "/dependencies/ChemIC"
+    schedule:
+      interval: "daily"
