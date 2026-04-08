@@ -35,7 +35,7 @@ llvmlite==0.45.1
 markupsafe==3.0.3
 matplotlib==3.10.0
 minify-html==0.18.1
-multimethod==1.12
+multimethod==2.0.2
 narwhals==2.14.0
 nest-asyncio==1.6.0
 networkx==3.4.2
