@@ -45,7 +45,7 @@ packaging==25.0
 pandas==2.3.3
 patsy==1.0.2
 phik==0.12.5
-pillow==12.1.1
+pillow==12.2.0
 plotly==6.5.0
 puremagic==1.30
 pyarrow==22.0.0
