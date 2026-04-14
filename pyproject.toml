@@ -13,14 +13,14 @@ classifiers = [
 requires-python = ">= 3.10"
 
 dependencies = [
-    "dash>=3.0.2",
-    "dash-bootstrap-components>=2.0.0",
-    "pandas>=2.2.3",
-    "plotly>=6.0.1",
-    "pyarrow>=19.0.1",
-    "ydata_profiling>=4.16.1",
-    "gunicorn>=23.0.0",
-    "huggingface_hub>=1.2.1",
+    "dash==4.1.0",
+    "dash-bootstrap-components==2.0.4",
+    "pandas==2.3.3",
+    "plotly==6.7.0",
+    "pyarrow==23.0.1",
+    "ydata_profiling==4.18.1",
+    "gunicorn==25.3.0",
+    "huggingface_hub==1.10.1",
 ]
 
 [build-system]
