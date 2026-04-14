@@ -1,41 +1,16 @@
 # SelectZyme-app
-Web application to host the pre calculated analyses by SelectZyme.
+Web application to host the pre-calculated demo analyses by SelectZyme from [huggingface](https://huggingface.co/davari-group/datasets)
 
 ![SelectZyme](assets/selectzyme_logo.png)
 
 ## Install
-Prerequisite for all installs is to clone the repository.
 ```
 git clone https://github.com/ipb-halle/SelectZyme-app.git
 cd SelectZyme-app
-```
-
-### Docker
-#### Run all case studies (serve SelectZyme server)
-```
 docker-compose up
-docker-compose down  # shut down services
+docker-compose down  # shut down services when desired
 ```
 Access the server from your browser at: `localhost/`
-
-### Local install to run a single case study
-Install dependencies defined in the `pyproject.toml` and SelectZyme without dependencies.
-```
-uv sync
-uv pip install --no-deps git+https://github.com/ipb-halle/SelectZyme.git
-```
-Troubleshooting install:
-```
-uv pip install .
-```
-
-Usage: 
-```
-python app.py  # runs example analysis 'demo' by default
-python app.py -i=petase
-```
-`-i=` specify the case study to load. Available case studies are listed [here](https://huggingface.co/datasets/davari-group/selectzyme-app-data/tree/main) with their names (here as an example petase).
-Access the server for your analysis from your browser at: `localhost:8050`
 
 ## Architecture
 ```mermaid
@@ -53,10 +28,27 @@ graph TD;
     end
 ```
 
-## Server deployment @ IPB
-Target server: [biocloud](https://biocloud.ipb-halle.de/)
-Service: [SelectZyme](https://biocloud.ipb-halle.de/selectzyme/)
+## Development
+This project uses the following tools to improve code quality:
+- [ruff](https://docs.astral.sh/ruff/tutorial/)
+  
+## License
+MIT License
 
+## Citation
+
+This repository contains the source code for the application hosted at [https://selectzyme.app.ipb-halle.de/](https://selectzyme.app.ipb-halle.de/), showing selected pre-calculated case studies for the manuscript:<br>
+
+Felix Moorhoff<sup>*1*</sup>, David Medina-Ortiz<sup>*1*</sup>, Alicja Kotnis<sup>*1*</sup>, Ahmed Hassanin<sup>*1,2*</sup>, Mehdi D. Davari<sup>*1,\**</sup>, <br>“Visualize, Explore, and Select”: A protein Language Model-Based Approach Enabling Navigation of Protein Sequence Space for Enzyme Discovery and Mining<br>
+*Journal* 2026, 61, 3463-3476 <br>
+https://doi.org/10.64898/2026.03.23.712833 <br>
+
+<sup>*1*</sup><sub>Department of Bioorganic Chemistry, Leibniz Institute of Plant Biochemistry, Weinberg 3, 06120 Halle, Germany</sub> <br>
+<sup>*2*</sup><sub>Department of Pharmacognosy, Faculty of Pharmacy, Assiut University, 71526 Assiut, Egypt</sub> <br>
+<sup>*\**</sup><sub>Corresponding author</sub> <br>
+
+
+## Server deployment @ IPB
 In order to automatically (re-)start the service (e.g. with a cronjob) please perform these steps:
 ```
 ./sz.sh install  # register service 1st time
@@ -83,28 +75,3 @@ sequenceDiagram
     SDP-->>-BP: Forward response
     BP-->>-User: Response
 ```
-* Changes: Biocloud proxy sits on top of SelectZyme proxy
-
-
-## Development
-This project uses the following tools to improve code quality:
-- [ruff](https://docs.astral.sh/ruff/tutorial/)
-
-Ocean server development (ocean_ip)
-http://ocean_ip/selectzyme/demo/
-
-
-# License
-MIT License
-
-## Citation
-
-This repository contains the source code for the application hosted at [https://selectzyme.app.ipb-halle.de/](https://selectzyme.app.ipb-halle.de/), showing selected pre-calculated case studies for the manuscript:<br>
-
-Felix Moorhoff<sup>*1*</sup>, David Medina-Ortiz<sup>*1*</sup>, Alicja Kotnis<sup>*1*</sup>, Ahmed Hassanin<sup>*1,2*</sup>, Mehdi D. Davari<sup>*1,\**</sup>, <br>“Visualize, Explore, and Select”: A protein Language Model-Based Approach Enabling Navigation of Protein Sequence Space for Enzyme Discovery and Mining<br>
-*Journal* 2026, 61, 3463-3476 <br>
-https://doi.org/10.64898/2026.03.23.712833 <br>
-
-<sup>*1*</sup><sub>Department of Bioorganic Chemistry, Leibniz Institute of Plant Biochemistry, Weinberg 3, 06120 Halle, Germany</sub> <br>
-<sup>*2*</sup><sub>Department of Pharmacognosy, Faculty of Pharmacy, Assiut University, 71526 Assiut, Egypt</sub> <br>
-<sup>*\**</sup><sub>Corresponding author</sub> <br>
