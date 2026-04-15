@@ -12,22 +12,6 @@ docker-compose down  # shut down services when desired
 ```
 Access the server from your browser at: `localhost/`
 
-## Architecture
-```mermaid
-graph TD;  
-    B[Demo analysis] --> D[data/demo/:/app/data_container/];
-    C[Petase analysis] --> E[data/petase/:/app/data_container/];
-    
-    A[Proxy - Nginx] -->|/demo/| B[Demo analysis];
-    A[Proxy - Nginx] -->|/petase/| C[Petase analysis];
-    
-    subgraph Docker Network;
-        A[Proxy - Nginx];
-        B[Demo analysis];
-        C[Petase analysis];
-    end
-```
-
 ## Development
 This project uses the following tools to improve code quality:
 - [ruff](https://docs.astral.sh/ruff/tutorial/)
@@ -74,4 +58,20 @@ sequenceDiagram
     SDA-->>-SDP: App response
     SDP-->>-BP: Forward response
     BP-->>-User: Response
+```
+
+### Architecture
+```mermaid
+graph TD;  
+    B[Demo analysis] --> D[data/demo/:/app/data_container/];
+    C[Petase analysis] --> E[data/petase/:/app/data_container/];
+    
+    A[Proxy - Nginx] -->|/demo/| B[Demo analysis];
+    A[Proxy - Nginx] -->|/petase/| C[Petase analysis];
+    
+    subgraph Docker Network;
+        A[Proxy - Nginx];
+        B[Demo analysis];
+        C[Petase analysis];
+    end
 ```
