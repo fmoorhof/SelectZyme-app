@@ -594,7 +594,7 @@ wheels = [
 
 [[package]]
 name = "huggingface-hub"
-version = "1.11.0"
+version = "1.12.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "filelock" },
@@ -607,9 +607,9 @@ dependencies = [
     { name = "typer" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/dc/89/e7aa12d8a6b9259bed10671abb25ae6fa437c0f88a86ecbf59617bae7759/huggingface_hub-1.11.0.tar.gz", hash = "sha256:15fb3713c7f9cdff7b808a94fd91664f661ab142796bb48c9cd9493e8d166278", size = 761749, upload-time = "2026-04-16T13:07:39.73Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3e/9f/3fda8b014db3ae239addc9b48b35c2cf7d318950b430712f34a2473ef81d/huggingface_hub-1.12.2.tar.gz", hash = "sha256:282c4999e641c89affdc4c02c265eddea944c1390dc19e89dac8ad3ae76dbdaf", size = 763393, upload-time = "2026-04-29T09:45:09.202Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/37/02/4f3f8997d1ea7fe0146b343e5e14bd065fa87af790d07e5576d31b31cc18/huggingface_hub-1.11.0-py3-none-any.whl", hash = "sha256:42a6de0afbfeb5e022222d36398f029679db4eb4778801aafda32257ae9131ab", size = 645499, upload-time = "2026-04-16T13:07:37.716Z" },
+    { url = "https://files.pythonhosted.org/packages/71/c1/1fa4162f6dd53259daf2ad31385273341821fa0acce164cd03971937a60e/huggingface_hub-1.12.2-py3-none-any.whl", hash = "sha256:7968e897fdbc6343c871c240d87d4434efe0ad9f80d57daa1cc5678c6d148529", size = 647757, upload-time = "2026-04-29T09:45:07.63Z" },
 ]
 
 [[package]]
@@ -2139,11 +2139,11 @@ requires-dist = [
     { name = "dash", specifier = "==4.1.0" },
     { name = "dash-bootstrap-components", specifier = "==2.0.4" },
     { name = "gunicorn", specifier = "==25.3.0" },
-    { name = "huggingface-hub", specifier = "==1.11.0" },
+    { name = "huggingface-hub", specifier = "==1.12.2" },
     { name = "pandas", specifier = "==2.3.3" },
     { name = "plotly", specifier = "==6.7.0" },
     { name = "pyarrow", specifier = "==24.0.0" },
-    { name = "ydata-profiling", specifier = "==4.18.1" },
+    { name = "ydata-profiling", specifier = "==4.18.4" },
 ]
 
 [[package]]
@@ -2402,7 +2402,7 @@ wheels = [
 
 [[package]]
 name = "ydata-profiling"
-version = "4.18.1"
+version = "4.18.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dacite" },
@@ -2429,9 +2429,9 @@ dependencies = [
     { name = "visions", extra = ["type-image-path"] },
     { name = "wordcloud" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/40/83/03011a81f7148a71b81dfd9afda9c497de9801a3af24a2f636e47701b052/ydata_profiling-4.18.1.tar.gz", hash = "sha256:6dc529893c84abecda2e6038564cabcd69a6b801a730e077b61b6d500a98f30c", size = 331100, upload-time = "2026-01-13T18:28:59.076Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9d/a6/9fce390621ec3e51ab7b2deb855bbb81f8b6c44917fdcfa095624feb1f4a/ydata_profiling-4.18.4.tar.gz", hash = "sha256:c19a0b3dec081da024d18800ffcee0160b076edecef66ca55c75e00e6ac15e21", size = 331570, upload-time = "2026-04-22T23:14:44.287Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/64/2c/992c6ef2677b182b86157eef2124a0e837aa3d128b5b09f6fb03cd51bb0a/ydata_profiling-4.18.1-py2.py3-none-any.whl", hash = "sha256:cd816865930f090cc71bbd5c2045b90c727e7448e3402d22f397f7ed3d4e2927", size = 400396, upload-time = "2026-01-13T18:28:57.08Z" },
+    { url = "https://files.pythonhosted.org/packages/df/ad/9078a92da6587d2a1b2376a30ac1030d0e932deb535dc203bbc8c60170ff/ydata_profiling-4.18.4-py2.py3-none-any.whl", hash = "sha256:5db41d8251e0b4c529ed226aaab2b2c493df4c83a206c2d0e50843a62f214b90", size = 400791, upload-time = "2026-04-22T23:14:42.176Z" },
 ]
 
 [[package]]
