@@ -368,11 +368,12 @@ wheels = [
 
 [[package]]
 name = "dash"
-version = "4.1.0"
+version = "4.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "flask" },
     { name = "importlib-metadata" },
+    { name = "janus" },
     { name = "nest-asyncio" },
     { name = "plotly" },
     { name = "requests" },
@@ -381,9 +382,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "werkzeug" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/44/da/a13ae3a6528bd51a6901461dbff4549c6009de203d6249a89b9a09ac5cfb/dash-4.1.0.tar.gz", hash = "sha256:17a92a87b0c1eacc025079a705e44e72cd4c5794629c0a2909942b611faeb595", size = 6927689, upload-time = "2026-03-23T20:39:47.578Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/04/25/90e909e6605445b7348a5453f1b242af7e1f2eb4220497b561874d9bc121/dash-4.2.0.tar.gz", hash = "sha256:53c959f8f5d5a1cc79995f097211e9f4c7039db715fe7d88de4e874c0652cf54", size = 6912113, upload-time = "2026-06-01T20:44:21.283Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2a/00/10b1f8b3885fc4add1853e9603af15c593fa0be20d37c158c4d811e868dc/dash-4.1.0-py3-none-any.whl", hash = "sha256:1af9f302bc14061061012cdb129b7e370d3604b12a7f730b252ad8e4966f01f7", size = 7232489, upload-time = "2026-03-23T20:39:40.658Z" },
+    { url = "https://files.pythonhosted.org/packages/2f/fb/1be45ee9bfbf2c468de35f9d94e7896ed0fdff3413f916b788932093204e/dash-4.2.0-py3-none-any.whl", hash = "sha256:12e0bc347643b31a22237b7049e999cf96386790ff23d2d4f98e07d575c67538", size = 7256065, upload-time = "2026-06-01T20:44:18.723Z" },
 ]
 
 [[package]]
@@ -594,7 +595,7 @@ wheels = [
 
 [[package]]
 name = "huggingface-hub"
-version = "1.16.4"
+version = "1.17.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -608,9 +609,9 @@ dependencies = [
     { name = "typer" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ab/11/9b6e439cb2417c479c3da108b38363232a1554721de9f8ef4836cb07422b/huggingface_hub-1.16.4.tar.gz", hash = "sha256:023bacd155f837d3fa56379ac8e23dababe6d6d87b04f8dacc258a44a38abe01", size = 792585, upload-time = "2026-05-26T17:19:09.971Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/bd/65/9826515abb600b5722bcf53f8b4a2fb58340b1f8bfcaee19f83561c13a44/huggingface_hub-1.17.0.tar.gz", hash = "sha256:fad842b6763ef70ebc3919665b1b9273645203185400a7d6c5eddc2323cc3435", size = 797082, upload-time = "2026-05-28T15:12:13.347Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/da/86/e05d58ea272089151ba9f6fcc7b44a97aa2533d5a5bce46611220c23c6d6/huggingface_hub-1.16.4-py3-none-any.whl", hash = "sha256:994ec184c3330952d7b5f131ea0b1a6ba1047bd05461f5dec191f8fc1099fbd7", size = 668190, upload-time = "2026-05-26T17:19:08.228Z" },
+    { url = "https://files.pythonhosted.org/packages/02/28/d7cef5e477b855c25d415b8f57e5bc7347c7a90cad3acf1725d0c92ca294/huggingface_hub-1.17.0-py3-none-any.whl", hash = "sha256:3b8156d23118e87f6a587648bfbc04f04a12a757ccb4ed298b35c4ae638bf24c", size = 671546, upload-time = "2026-05-28T15:12:11.441Z" },
 ]
 
 [[package]]
@@ -659,6 +660,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/9c/cb/8ac0172223afbccb63986cc25049b154ecfb5e85932587206f42317be31d/itsdangerous-2.2.0.tar.gz", hash = "sha256:e0050c0b7da1eea53ffaf149c0cfbb5c6e2e2b69c4bef22c81fa6eb73e5f6173", size = 54410, upload-time = "2024-04-16T21:28:15.614Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/04/96/92447566d16df59b2a776c0fb82dbc4d9e07cd95062562af01e408583fc4/itsdangerous-2.2.0-py3-none-any.whl", hash = "sha256:c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef", size = 16234, upload-time = "2024-04-16T21:28:14.499Z" },
+]
+
+[[package]]
+name = "janus"
+version = "2.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/7f/69884b6618be4baf6ebcacc716ee8680a842428a19f403db6d1c0bb990aa/janus-2.0.0.tar.gz", hash = "sha256:0970f38e0e725400496c834a368a67ee551dc3b5ad0a257e132f5b46f2e77770", size = 22910, upload-time = "2024-12-13T12:59:08.622Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/68/34/65604740edcb20e1bda6a890348ed7d282e7dd23aa00401cbe36fd0edbd9/janus-2.0.0-py3-none-any.whl", hash = "sha256:7e6449d34eab04cd016befbd7d8c0d8acaaaab67cb59e076a69149f9031745f9", size = 12161, upload-time = "2024-12-13T12:59:06.106Z" },
 ]
 
 [[package]]
@@ -1493,15 +1503,15 @@ wheels = [
 
 [[package]]
 name = "plotly"
-version = "6.7.0"
+version = "6.8.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "narwhals" },
     { name = "packaging" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3a/7f/0f100df1172aadf88a929a9dbb902656b0880ba4b960fe5224867159d8f4/plotly-6.7.0.tar.gz", hash = "sha256:45eea0ff27e2a23ccd62776f77eb43aa1ca03df4192b76036e380bb479b892c6", size = 6911286, upload-time = "2026-04-09T20:36:45.738Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/fd/d72c292d78aadb93d1a9bcd76bf3c678271040c7cf10abe5788b33040a39/plotly-6.8.0.tar.gz", hash = "sha256:e088e7ddc68d4f70e3d66659224727a45296d71d2b8284181862d3d8f1f0d88f", size = 6915161, upload-time = "2026-06-03T18:33:40.226Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/90/ad/cba91b3bcf04073e4d1655a5c1710ef3f457f56f7d1b79dcc3d72f4dd912/plotly-6.7.0-py3-none-any.whl", hash = "sha256:ac8aca1c25c663a59b5b9140a549264a5badde2e057d79b8c772ae2920e32ff0", size = 9898444, upload-time = "2026-04-09T20:36:39.812Z" },
+    { url = "https://files.pythonhosted.org/packages/f9/14/abe5ce876ab5b66ee3c691bf537fcd43d037aea55d447aacf74630a8f31e/plotly-6.8.0-py3-none-any.whl", hash = "sha256:13c5c4a0f70b74cab1913eda0de49b826df5931708eb6f9c3010040614700ec8", size = 9902055, upload-time = "2026-06-03T18:33:34.26Z" },
 ]
 
 [[package]]
@@ -2137,12 +2147,12 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dash", specifier = "==4.1.0" },
+    { name = "dash", specifier = "==4.2.0" },
     { name = "dash-bootstrap-components", specifier = "==2.0.4" },
     { name = "gunicorn", specifier = "==26.0.0" },
-    { name = "huggingface-hub", specifier = "==1.16.4" },
+    { name = "huggingface-hub", specifier = "==1.17.0" },
     { name = "pandas", specifier = "==2.3.3" },
-    { name = "plotly", specifier = "==6.7.0" },
+    { name = "plotly", specifier = "==6.8.0" },
     { name = "pyarrow", specifier = "==24.0.0" },
     { name = "ydata-profiling", specifier = "==4.18.4" },
 ]
